@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100% 
+  );
+}
+
+header {
+  background-color: blue;
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P';
+  margin-top: 2%;
+  text-align:center;
+
+  color:#fbff00;
+}
+
+.main-game {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.genius {
+  display: grid;
+  grid-template-areas: 'verde vermelho'
+  'amarelo azul';
+  grid-gap: 15px;
+  border: 1px solid #0a0a0a;
+  background-color: #0a0a0a;
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+  animation: rotate-center 2s ease-in-out infinite alternate-reverse both;
+}
+
+.blue {
+  grid-area: azul;
+  background-image: linear-gradient(to right bottom, #016dd9, #06407b);
+  border-bottom-right-radius: 100%;
+  }
+:hover {
+  box-shadow: 0 0 5px #0a2661;
+}
+
+.red {
+  grid-area: vermelho;
+  background-image: linear-gradient(to left bottom, #fe0000, #8b0d0d);
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: amarelo;
+  background-image: linear-gradient(to left bottom, #ffff00, #b0b002);
+  border-bottom-left-radius: 100%;
+}
+
+.green {
+  grid-area: verde;
+  background-image: linear-gradient(to right bottom, #01d936, #057621);
+  border-top-left-radius: 100%;
+}
+
+.selected {
+  opacity: 0.5;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    margin-top: 10%;
+  }
+  .genius {
+    width: 350px;
+    height: 350px;;
+  }
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
